@@ -84,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'colegios',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': '100%appescuela',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -133,6 +133,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "media"),
 ]
 
-
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 FBCM_API_KEY = "AIzaSyCuZ0cUUXYdV_ZnJlB8BG-aKgzkLk2EleM"

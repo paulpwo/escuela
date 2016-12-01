@@ -1,3 +1,8 @@
+# encoding=utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 from django.contrib.auth.decorators import login_required
 from app.inicio.forms import  categoriasForm
 from django.shortcuts import render, get_object_or_404

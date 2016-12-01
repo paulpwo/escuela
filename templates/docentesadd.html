@@ -65,6 +65,13 @@
               $('.span_title').text('Desactivado');
         }
 
+
+            $("#id_username").change(function(){
+               // alert($("#id_username").val());
+                $('#id_email').val($(this).val());
+        });
+
+
          $('input#id_is_active').change(function() {
                 if ($('input#id_is_active').prop('checked')) {
                         $('.span_title').text('Activo');
@@ -172,15 +179,15 @@
                                 </div>
 
                             </div>
-                            <div class="form-group">
+            {% comment %} <div class="form-group">
                                 <span class="input-group-addon"><span class="glyphicon  fa-lg"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
                                 </span></span>
                                 <div class="input-group-content">
                                     {{ ucform.email|add:'class="form-control" id="username9"' }}
                                     <label for="username9">Correo</label>
                                 </div>
-                            </div>
-
+                            </div>% endcomment %}
+                            {{ ucform.email.as_hidden|add:'class="form-control" id="username9"' }}
                             <div class="form-group">
                                 <span class="input-group-addon"><span class="glyphicon  fa-lg"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
                                 </span></span>

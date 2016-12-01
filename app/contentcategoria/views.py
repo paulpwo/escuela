@@ -1,3 +1,8 @@
+# encoding=utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 from app.inicio.forms import ContenidoForm
 from app.inicio.models import Contenido, Categorias
 from django.contrib.auth.decorators import login_required
